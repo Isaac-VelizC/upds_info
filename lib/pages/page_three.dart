@@ -27,7 +27,7 @@ class _PageThreeState extends State<PageThree> {
                   MaterialPageRoute(builder: (context) => const PageFour()),
                 );
               },
-              child: Text('Ir a otra página'),
+              child: const Text('Ir a otra página'),
             ),
           ],
         ),

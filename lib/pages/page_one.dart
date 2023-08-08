@@ -28,7 +28,7 @@ class _PageOneState extends State<PageOne> {
                   MaterialPageRoute(builder: (context) => const PageTwo()),
                 );
               },
-              child: Text('Ir a otra página'),
+              child: const Text('Ir a otra página'),
             ),
           ],
         ),
