@@ -1,36 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:upds_info/pages/page_home.dart';
-import 'package:upds_info/pages/page_three.dart';
+import 'package:upds_info/widgets/appbar_widget.dart';
 import 'package:upds_info/widgets/navegation_widget.dart';
 
-class PageTwo extends StatefulWidget {
-  const PageTwo({super.key});
+class PageTwo extends StatelessWidget {
+  final List<String> images;
+  final String nombre;
+  const PageTwo({super.key, required this.images, required this.nombre});
 
-  @override
-  State<PageTwo> createState() => _PageTwoState();
-}
-
-class _PageTwoState extends State<PageTwo> {
   final int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text('Pagina 2'),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => const PageThree()),
-                );
-              },
-              child: const Text('Ir a otra página'),
+      appBar: CustomAppBar(title: nombre),
+      body: PageView.builder(
+        itemCount: images.length,
+        itemBuilder: (context, index) {
+          return Center(
+            child: InteractiveViewer(
+              child: Image.asset(
+                images[index],
+                fit: BoxFit.contain,
+              ),
             ),
-          ],
-        ),
+          );
+        },
       ),
       bottomNavigationBar: NavigationWidget(
         selectedIndex: _selectedIndex,

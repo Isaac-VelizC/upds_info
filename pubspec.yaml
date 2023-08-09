@@ -63,6 +63,21 @@ flutter:
   assets:
     - assets/
     - assets/icons/
+    - assets/Derecho/
+    - assets/Psicologia/
+    - assets/AdminEmpresas/
+    - assets/Civil/
+    - assets/ComunicacionSocial/
+    - assets/Contaduria/
+    - assets/IngComercial/
+    - assets/Psicopedagogia/
+    - assets/Redes/
+    - assets/Sistemas/
+    - assets/Semi/AdminEmpresas/
+    - assets/Semi/ComunicacionSocial/
+    - assets/Semi/Derecho/
+    - assets/Semi/IngComercial/
+    - assets/Semi/Psicologia/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

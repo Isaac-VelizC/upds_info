@@ -3,29 +3,28 @@ class Carrera {
   late String nombre;
   late String sigla;
   late String matricula;
+  late String tipo;
   late String image1;
-  late String? image2;
-  late String? image3;
+  late List<String> images; // Array de imágenes
 
   Carrera({
     this.id,
     required this.nombre,
     required this.sigla,
     required this.matricula,
+    required this.tipo,
     required this.image1,
-    this.image2,
-    this.image3,
+    required this.images,
   });
 
-  
   Carrera.fromMap(Map<String, dynamic> json) {
     id = json['id'];
     nombre = json['nombre'];
     sigla = json['sigla'];
     matricula = json['matricula'];
+    tipo = json['tipo'];
     image1 = json['image1'];
-    image2 = json['image2'];
-    image3 = json['image3'];
+    images = json['images'];
   }
 
   Map<String, dynamic> toMap() {
@@ -33,9 +32,9 @@ class Carrera {
       'nombre': nombre,
       'sigla': sigla,
       'matricula': matricula,
+      'tipo': tipo,
       'image1': image1,
-      'image2': image2,
-      'image3': image3,
+      'images': images,
     };
   }
 }
