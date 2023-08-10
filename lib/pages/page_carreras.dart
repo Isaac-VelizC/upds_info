@@ -31,7 +31,7 @@ class _PageCarreraState extends State<PageCarrera> {
             image: AssetImage(
               widget.tipo == 'PRE'
                   ? 'assets/BakcGround.png'
-                  : 'assets/BakcGround-semi.png',
+                  : 'assets/BakcGroundSemi.png',
             ),
             fit: BoxFit.cover,
           ),
@@ -81,7 +81,7 @@ class _PageCarreraState extends State<PageCarrera> {
             image: AssetImage(
               widget.tipo == 'PRE'
                   ? 'assets/BakcGround.png'
-                  : 'assets/BakcGround-semi.png',
+                  : 'assets/BakcGroundSemi.png',
             ),
             fit: BoxFit.cover,
           ),

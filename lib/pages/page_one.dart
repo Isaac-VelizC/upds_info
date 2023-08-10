@@ -35,7 +35,7 @@ class PageOne extends StatelessWidget {
                         fontWeight: FontWeight.w500,
                         color: negro),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 12,
                   ),
                   Text(

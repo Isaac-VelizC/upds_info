@@ -73,11 +73,11 @@ flutter:
     - assets/Psicopedagogia/
     - assets/Redes/
     - assets/Sistemas/
-    - assets/Semi/AdminEmpresas/
-    - assets/Semi/ComunicacionSocial/
-    - assets/Semi/Derecho/
-    - assets/Semi/IngComercial/
-    - assets/Semi/Psicologia/
+    - assets/semi/AdminEmpresas/
+    - assets/semi/ComunicacionSocial/
+    - assets/semi/Derecho/
+    - assets/semi/IngComercial/
+    - assets/semi/Psicologia/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
