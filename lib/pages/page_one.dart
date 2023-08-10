@@ -13,53 +13,66 @@ class PageOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final sizeTexto = MediaQuery.of(context).size.width * 0.03;
+    final SizedboxHeight = MediaQuery.of(context).size.height * 0.3;
     return Scaffold(
       appBar: CustomAppBar(title: carrera.nombre),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Container(
-                width: double.infinity,
-                alignment: Alignment.center,
-                child: Text(
-                  carrera.matricula,
-                  textAlign: TextAlign.justify,
-                  style: const TextStyle(
-                      fontSize: 18, fontWeight: FontWeight.w500, color: negro),
-                ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: SizedBox(
+              height: SizedboxHeight,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    carrera.texto1,
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                        fontSize: sizeTexto,
+                        fontWeight: FontWeight.w500,
+                        color: negro),
+                  ),
+                  SizedBox(
+                    height: 12,
+                  ),
+                  Text(
+                    carrera.texto2!.isEmpty ? '' : carrera.texto2!,
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                        fontSize: sizeTexto,
+                        fontWeight: FontWeight.w500,
+                        color: negro),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 20),
-            Align(
-              alignment: Alignment.topCenter,
-              child: SizedBox(
-                width: 200,
-                child: Image(
-                  image: AssetImage('assets/' + carrera.image1.toString()),
-                  fit: BoxFit.contain,
-                ),
-              ),
+          ),
+          SizedBox(
+            width: 180,
+            child: Image(
+              image: AssetImage('assets/' + carrera.image1.toString()),
+              fit: BoxFit.cover,
             ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => PageTwo(
-                      images: carrera.images,
-                      nombre: carrera.nombre,
-                    ),
-                  ), // Reemplaza con el nombre de tu nueva página
-                );
-              },
-              child: const Text('Matrícula'),
-            ),
-          ],
-        ),
+          ),
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PageTwo(
+                    images: carrera.images,
+                    nombre: carrera.nombre,
+                  ),
+                ), // Reemplaza con el nombre de tu nueva página
+              );
+            },
+            child: const Text('MALLA CURRICULAR'),
+          ),
+        ],
       ),
       bottomNavigationBar: NavigationWidget(
         selectedIndex: _selectedIndex,

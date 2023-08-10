@@ -19,7 +19,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           Text(
             title,
             style: const TextStyle(
-              color: updsAzul, // Cambia al color deseado
+              color: updsAzul,
               fontSize: 25,
               fontWeight: FontWeight.bold,
             ),
@@ -27,7 +27,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           Container(
             height: 4,
             width: MediaQuery.of(context).size.width - 20,
-            color: updsCeleste, // Cambia al color deseado
+            color: updsAzul,
           ),
         ],
       ),
