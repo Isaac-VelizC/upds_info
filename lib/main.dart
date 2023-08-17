@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:upds_info/themes/colors.dart';
 import 'package:upds_info/welcome.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent, //top bar color
+    statusBarBrightness: Brightness.light,
+  ));
   runApp(const MyApp());
 }
 

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:upds_info/pages/page_carreras.dart';
+import 'package:upds_info/themes/colors.dart';
+import 'package:video_player/video_player.dart';
+import 'package:chewie/chewie.dart';
 
 class PageHome extends StatefulWidget {
   const PageHome({super.key});
@@ -9,84 +12,84 @@ class PageHome extends StatefulWidget {
 }
 
 class _PageHomeState extends State<PageHome> {
+  ChewieController? _chewieController;
+
+  @override
+  void initState() {
+    super.initState();
+    _initializeVideoController();
+  }
+
+  Future<void> _initializeVideoController() async {
+    final videoController =
+        VideoPlayerController.asset('assets/BACKGROUND.mp4');
+    await videoController.initialize();
+    setState(() {
+      _chewieController = ChewieController(
+        videoPlayerController: videoController,
+        autoPlay: true,
+        looping: true,
+        showControls: false,
+      );
+    });
+  }
+
+  void _navigateToCarreraPage(String tipo) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => PageCarrera(tipo: tipo),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/BakcGround.png'),
-            fit: BoxFit.cover,
-          ),
-        ),
-        child: Column(
+        color: updsFondos,
+        child: Stack(
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 100),
-              child: Align(
-                alignment: Alignment.topCenter,
-                child: SizedBox(
-                  width: 200,
-                  child: Image(
-                    image: AssetImage('assets/La-U-de-los-que-decidenN.png'),
-                    fit: BoxFit.contain,
+            if (_chewieController != null)
+              Positioned.fill(
+                child: Chewie(controller: _chewieController!),
+              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: double.infinity,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const SizedBox(width: 20),
+                      _buildCarreraImage('PRE', 'assets/Logo-Presencial.png'),
+                      const SizedBox(width: 20),
+                      _buildCarreraImage('SEMI', 'assets/Logo-Semi.png'),
+                      const SizedBox(width: 20),
+                    ],
                   ),
                 ),
-              ),
-            ),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
-                    width: double.infinity, // Ancho máximo del contenedor
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Flexible(
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const PageCarrera(
-                                          tipo: 'PRE',
-                                        )),
-                              );
-                            },
-                            child: const Image(
-                              image: AssetImage('assets/Logo-Presencial.png'),
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 20),
-                        Flexible(
-                          child: InkWell(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const PageCarrera(
-                                          tipo: 'SEMI',
-                                        )),
-                              );
-                            },
-                            child: const Image(
-                              image: AssetImage('assets/Logo-Semi.png'),
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              ],
             ),
           ],
         ),
       ),
     );
+  }
+
+  Widget _buildCarreraImage(String tipo, String imagePath) {
+    return Flexible(
+      child: InkWell(
+        onTap: () => _navigateToCarreraPage(tipo),
+        child: Image.asset(imagePath),
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _chewieController?.dispose();
   }
 }

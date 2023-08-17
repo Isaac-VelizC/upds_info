@@ -13,19 +13,23 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       automaticallyImplyLeading: false,
-      title: Column(
+      flexibleSpace: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: const TextStyle(
-              color: updsAzul,
-              fontSize: 25,
-              fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.only(top: 20, left: 16),
+            child: Text(
+              title,
+              style: const TextStyle(
+                color: updsAzul,
+                fontSize: 35,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'Akshar',
+              ),
             ),
           ),
           Container(
-            height: 4,
+            height: 5,
             width: MediaQuery.of(context).size.width - 20,
             color: updsAzul,
           ),

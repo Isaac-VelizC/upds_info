@@ -10,7 +10,7 @@ final carreras = <Carrera>[
     texto2: '',
     tipo: 'PRE',
     image1: 'Derecho/Datos.png',
-    images: ['assets/Derecho/Malla-01.png', 'assets/Derecho/Malla-01.png'],
+    images: ['assets/Derecho/Malla-01.png', 'assets/Derecho/Malla-02.png'],
   ),
   Carrera(
     id: 2,
@@ -58,7 +58,7 @@ final carreras = <Carrera>[
   ),
   Carrera(
     id: 5,
-    nombre: 'CONTUDIRIA PÚBLICA',
+    nombre: 'CONTUDURIA PÚBLICA',
     sigla: 'PSI',
     texto1:
         'El Contador Público formado en la UPDS es un profesional que está vinculado a la alta dirección gerencial, determinando los objetivos administrativos y financieros, desarrollando nuevas estrategias, identificando oportunidades de financiamiento e inversión dentro de las organizaciones, liderando la trasformación tecnológica.',
@@ -135,21 +135,34 @@ final carreras = <Carrera>[
   ),
   Carrera(
     id: 10,
-    nombre: 'ADMINISTRACIÓN DE EMPRESAS',
-    sigla: 'PSI',
+    nombre: 'DERECHO',
+    sigla: 'RI',
     texto1:
-        'El Administrador de Empresas formado en la UPDS es un profesional que responde a las exigencias de las organizaciones modernas. Brinda eficiencia a una organización y garantiza su sostenibilidad. Aporta a las decisiones gerenciales en el ámbito financiero, mercadeo y gestión del talento humano.',
-    texto2:
-        'Se desempeña en áreas de desarrollo empresarial, negocios internacionales y análisis de sistemas de información, además está formado para ser empresario, asesor o consultor en cualquiera de las áreas de la administración.',
+        'El abogado formado en la UPDS es un profesional comprometido con el cumplimiento de los derechos fundamentales, con un enfoque conciliador y con capacidad para brindar asesoramiento jurídico a quien lo necesite, desplegando aptitudes y cualidades para lograr una representación idónea y oportuna en el ámbito público y privado.',
+    texto2: '',
     tipo: 'SEMI',
-    image1: 'semi/AdminEmpresas/Datos.png',
+    image1: 'semi/Derecho/Datos.png',
     images: [
-      'assets/semi/AdminEmpresas/Malla-01.png',
-      'assets/semi/AdminEmpresas/Malla-02.png',
+      'assets/semi/Derecho/Malla-01.png',
+      'assets/semi/Derecho/Malla-02.png',
     ],
   ),
   Carrera(
     id: 11,
+    nombre: 'PSICOLOGÍA',
+    sigla: 'DER',
+    texto1:
+        'El Licenciado en Psicología formado en la UDPS es un profesional que realiza diagnósticos e intervenciones en el área clínica, organizacional, social y educativa, a través de instrumentos y técnicas actualizadas, que permitan ayudar a las personas e instituciones en las cuales se desempeña, asumiendo una postura ética y comprometida.',
+    texto2: '',
+    tipo: 'SEMI',
+    image1: 'semi/Psicologia/Datos.png',
+    images: [
+      'assets/semi/Psicologia/Malla-01.png',
+      'assets/semi/Psicologia/Malla-02.png',
+    ],
+  ),
+  Carrera(
+    id: 12,
     nombre: 'COMUNICACIÓN SOCIAL',
     sigla: 'IC',
     texto1:
@@ -161,20 +174,6 @@ final carreras = <Carrera>[
     images: [
       'assets/semi/ComunicacionSocial/Malla-01.png',
       'assets/semi/ComunicacionSocial/Malla-02.png',
-    ],
-  ),
-  Carrera(
-    id: 12,
-    nombre: 'DERECHO',
-    sigla: 'RI',
-    texto1:
-        'El abogado formado en la UPDS es un profesional comprometido con el cumplimiento de los derechos fundamentales, con un enfoque conciliador y con capacidad para brindar asesoramiento jurídico a quien lo necesite, desplegando aptitudes y cualidades para lograr una representación idónea y oportuna en el ámbito público y privado.',
-    texto2: '',
-    tipo: 'SEMI',
-    image1: 'semi/Derecho/Datos.png',
-    images: [
-      'assets/semi/Derecho/Malla-01.png',
-      'assets/semi/Derecho/Malla-02.png',
     ],
   ),
   Carrera(
@@ -193,17 +192,18 @@ final carreras = <Carrera>[
     ],
   ),
   Carrera(
-    id: 14,
-    nombre: 'PSICOLOGÍA',
-    sigla: 'DER',
+    id: 12,
+    nombre: 'ADMINISTRACIÓN DE EMPRESAS',
+    sigla: 'PSI',
     texto1:
-        'El Licenciado en Psicología formado en la UDPS es un profesional que realiza diagnósticos e intervenciones en el área clínica, organizacional, social y educativa, a través de instrumentos y técnicas actualizadas, que permitan ayudar a las personas e instituciones en las cuales se desempeña, asumiendo una postura ética y comprometida.',
-    texto2: '',
+        'El Administrador de Empresas formado en la UPDS es un profesional que responde a las exigencias de las organizaciones modernas. Brinda eficiencia a una organización y garantiza su sostenibilidad. Aporta a las decisiones gerenciales en el ámbito financiero, mercadeo y gestión del talento humano.',
+    texto2:
+        'Se desempeña en áreas de desarrollo empresarial, negocios internacionales y análisis de sistemas de información, además está formado para ser empresario, asesor o consultor en cualquiera de las áreas de la administración.',
     tipo: 'SEMI',
-    image1: 'semi/Psicologia/Datos.png',
+    image1: 'semi/AdminEmpresas/Datos.png',
     images: [
-      'assets/semi/Psicologia/Malla-01.png',
-      'assets/semi/Psicologia/Malla-02.png',
+      'assets/semi/AdminEmpresas/Malla-01.png',
+      'assets/semi/AdminEmpresas/Malla-02.png',
     ],
   ),
 ];

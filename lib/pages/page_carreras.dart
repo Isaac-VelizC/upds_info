@@ -52,9 +52,10 @@ class _PageCarreraState extends State<PageCarrera> {
                       child: Text(
                         carrera.nombre,
                         style: const TextStyle(
-                          fontSize: 20,
+                          fontSize: 35,
                           fontWeight: FontWeight.w700,
                           color: blanco,
+                          fontFamily: 'Akshar',
                         ),
                         textAlign: TextAlign.center,
                       ),

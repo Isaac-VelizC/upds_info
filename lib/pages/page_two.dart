@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:upds_info/pages/page_home.dart';
+import 'package:upds_info/themes/colors.dart';
 import 'package:upds_info/widgets/appbar_widget.dart';
 import 'package:upds_info/widgets/navegation_widget.dart';
 
@@ -11,20 +12,41 @@ class PageTwo extends StatelessWidget {
   final int _selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
+    final sizeTexto = MediaQuery.of(context).size.width * 0.05;
     return Scaffold(
-      appBar: CustomAppBar(title: nombre),
-      body: PageView.builder(
-        itemCount: images.length,
-        itemBuilder: (context, index) {
-          return Center(
-            child: InteractiveViewer(
-              child: Image.asset(
-                images[index],
-                fit: BoxFit.contain,
-              ),
+      body: Column(
+        children: [
+          CustomAppBar(title: nombre),
+          const SizedBox(
+            height: 20,
+          ),
+          Text(
+            'MALLA CURRICULAR',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: sizeTexto,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'Akshar',
+              color: updsAzul,
             ),
-          );
-        },
+          ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height - 300,
+            child: PageView.builder(
+              itemCount: images.length,
+              itemBuilder: (context, index) {
+                return Center(
+                  child: InteractiveViewer(
+                    child: Image.asset(
+                      images[index],
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
       ),
       bottomNavigationBar: NavigationWidget(
         selectedIndex: _selectedIndex,
