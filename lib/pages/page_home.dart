@@ -24,6 +24,7 @@ class _PageHomeState extends State<PageHome> {
     final videoController =
         VideoPlayerController.asset('assets/BACKGROUND.mp4');
     await videoController.initialize();
+    videoController.seekTo(Duration.zero);
     setState(() {
       _chewieController = ChewieController(
         videoPlayerController: videoController,

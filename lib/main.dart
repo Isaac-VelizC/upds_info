@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-    statusBarColor: Colors.transparent, //top bar color
+    statusBarColor: Colors.transparent,
     statusBarBrightness: Brightness.light,
   ));
   runApp(const MyApp());

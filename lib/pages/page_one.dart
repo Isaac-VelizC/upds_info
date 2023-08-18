@@ -16,7 +16,6 @@ class PageOne extends StatelessWidget {
     final sizeImage = MediaQuery.of(context).size.width * 0.50;
     return Scaffold(
       body: Column(
-        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           CustomAppBar(title: carrera.nombre),
           const SizedBox(

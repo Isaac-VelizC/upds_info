@@ -22,11 +22,11 @@ class _NavigationWidgetState extends State<NavigationWidget> {
       backgroundColor: Colors.transparent,
       elevation: 0.0,
       items: [
-        BottomNavigationBarItem(
-          icon: SvgPicture.asset(
-            'assets/icons/atras.svg',
-            height: 30,
-            width: 30,
+        const BottomNavigationBarItem(
+          icon: Icon(
+            Icons.home,
+            size: 30,
+            color: Colors.transparent,
           ),
           label: '',
         ),

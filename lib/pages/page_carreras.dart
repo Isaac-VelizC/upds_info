@@ -47,7 +47,6 @@ class _PageCarreraState extends State<PageCarrera> {
                 title: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Bullet(),
                     Flexible(
                       child: Text(
                         carrera.nombre,
@@ -66,9 +65,10 @@ class _PageCarreraState extends State<PageCarrera> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => PageOne(
-                              carrera: carrera,
-                            )),
+                      builder: (context) => PageOne(
+                        carrera: carrera,
+                      ),
+                    ),
                   );
                 },
               );
@@ -99,23 +99,6 @@ class _PageCarreraState extends State<PageCarrera> {
             }
           },
         ),
-      ),
-    );
-  }
-}
-
-class Bullet extends StatelessWidget {
-  const Bullet({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 8,
-      height: 8,
-      margin: const EdgeInsets.only(right: 8),
-      decoration: const BoxDecoration(
-        color: Colors.blue,
-        shape: BoxShape.circle,
       ),
     );
   }
