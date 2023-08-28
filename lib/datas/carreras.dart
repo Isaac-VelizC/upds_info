@@ -10,7 +10,14 @@ final carreras = <Carrera>[
     texto2: '',
     tipo: 'PRE',
     image1: 'Derecho/Datos.png',
-    images: ['assets/Derecho/Malla-01.png', 'assets/Derecho/Malla-02.png'],
+    images: [
+      'assets/Derecho/Malla-01.png',
+      'assets/Derecho/Malla-02.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
+    ],
   ),
   Carrera(
     id: 2,
@@ -23,7 +30,11 @@ final carreras = <Carrera>[
     image1: 'Psicologia/Datos.png',
     images: [
       'assets/Psicologia/Malla-01.png',
-      'assets/Psicologia/Malla-02.png'
+      'assets/Psicologia/Malla-02.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -38,7 +49,9 @@ final carreras = <Carrera>[
     image1: 'Psicopedagogia/Datos.png',
     images: [
       'assets/Psicopedagogia/Malla-01.png',
-      'assets/Psicopedagogia/Malla-02.png'
+      'assets/Psicopedagogia/Malla-02.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -53,7 +66,9 @@ final carreras = <Carrera>[
     image1: 'AdminEmpresas/Datos.png',
     images: [
       'assets/AdminEmpresas/Malla-01.png',
-      'assets/AdminEmpresas/Malla-02.png'
+      'assets/AdminEmpresas/Malla-02.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -68,7 +83,9 @@ final carreras = <Carrera>[
     image1: 'Contaduria/Datos.png',
     images: [
       'assets/Contaduria/Malla-01.png',
-      'assets/Contaduria/Malla-02.png'
+      'assets/Contaduria/Malla-02.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -83,7 +100,9 @@ final carreras = <Carrera>[
     image1: 'IngComercial/Datos.png',
     images: [
       'assets/IngComercial/Malla-01.png',
-      'assets/IngComercial/Malla-02.png'
+      'assets/IngComercial/Malla-02.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -99,7 +118,9 @@ final carreras = <Carrera>[
     images: [
       'assets/Sistemas/Malla-01.png',
       'assets/Sistemas/Malla-02.png',
-      'assets/Sistemas/Malla-03.png'
+      'assets/Sistemas/Malla-03.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -114,7 +135,9 @@ final carreras = <Carrera>[
     images: [
       'assets/Civil/Malla-01.png',
       'assets/Civil/Malla-02.png',
-      'assets/Civil/Malla-03.png'
+      'assets/Civil/Malla-03.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -130,7 +153,9 @@ final carreras = <Carrera>[
     images: [
       'assets/Redes/Malla-01.png',
       'assets/Redes/Malla-02.png',
-      'assets/Redes/Malla-03.png'
+      'assets/Redes/Malla-03.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -145,6 +170,8 @@ final carreras = <Carrera>[
     images: [
       'assets/semi/Derecho/Malla-01.png',
       'assets/semi/Derecho/Malla-02.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -159,6 +186,8 @@ final carreras = <Carrera>[
     images: [
       'assets/semi/Psicologia/Malla-01.png',
       'assets/semi/Psicologia/Malla-02.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -174,6 +203,8 @@ final carreras = <Carrera>[
     images: [
       'assets/semi/ComunicacionSocial/Malla-01.png',
       'assets/semi/ComunicacionSocial/Malla-02.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -189,6 +220,8 @@ final carreras = <Carrera>[
     images: [
       'assets/semi/IngComercial/Malla-01.png',
       'assets/semi/IngComercial/Malla-02.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
   Carrera(
@@ -204,6 +237,8 @@ final carreras = <Carrera>[
     images: [
       'assets/semi/AdminEmpresas/Malla-01.png',
       'assets/semi/AdminEmpresas/Malla-02.png',
+      'assets/Requisitos/RequisitosExtranjeros.png',
+      'assets/Requisitos/Requisitos.png'
     ],
   ),
 ];
