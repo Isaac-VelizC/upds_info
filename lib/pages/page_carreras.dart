@@ -40,38 +40,89 @@ class _PageCarreraState extends State<PageCarrera> {
           alignment: Alignment.center,
           child: ListView.builder(
             shrinkWrap: true,
-            itemCount: carrerasFiltradas.length,
+            itemCount:
+                carrerasFiltradas.length + (widget.tipo == 'SEMI' ? 0 : 1),
             itemBuilder: (context, index) {
-              final carrera = carrerasFiltradas[index];
-              return ListTile(
-                title: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Flexible(
-                      child: Text(
-                        carrera.nombre,
-                        style: const TextStyle(
-                          fontSize: 35,
-                          fontWeight: FontWeight.w700,
-                          color: blanco,
-                          fontFamily: 'Akshar',
+              if (index == carrerasFiltradas.length - 1 &&
+                  widget.tipo != 'SEMI') {
+                return const ListTile(
+                  title: Center(
+                    child: Text(
+                      'Nueva Carrera',
+                      style: TextStyle(
+                        fontSize: 30,
+                        fontWeight: FontWeight.w700,
+                        color: negro,
+                        fontFamily: 'Akshar',
+                      ),
+                    ),
+                  ),
+                );
+              } else if (index == carrerasFiltradas.length) {
+                // Último elemento: Elemento normal
+                final carrera =
+                    carrerasFiltradas[index - (widget.tipo != 'SEMI' ? 1 : 0)];
+                return ListTile(
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Text(
+                          carrera.nombre,
+                          style: const TextStyle(
+                            fontSize: 35,
+                            fontWeight: FontWeight.w700,
+                            color: blanco,
+                            fontFamily: 'Akshar',
+                          ),
+                          textAlign: TextAlign.center,
                         ),
-                        textAlign: TextAlign.center,
                       ),
-                    ),
-                  ],
-                ),
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => PageOne(
-                        carrera: carrera,
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PageOne(
+                          carrera: carrera,
+                        ),
                       ),
-                    ),
-                  );
-                },
-              );
+                    );
+                  },
+                );
+              } else {
+                final carrera = carrerasFiltradas[index];
+                return ListTile(
+                  title: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Flexible(
+                        child: Text(
+                          carrera.nombre,
+                          style: const TextStyle(
+                            fontSize: 35,
+                            fontWeight: FontWeight.w700,
+                            color: blanco,
+                            fontFamily: 'Akshar',
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ],
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PageOne(
+                          carrera: carrera,
+                        ),
+                      ),
+                    );
+                  },
+                );
+              }
             },
           ),
         ),

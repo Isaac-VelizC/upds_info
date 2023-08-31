@@ -20,28 +20,42 @@ class PageTwo extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Text(
-            'MALLA CURRICULAR',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: sizeTexto,
-              fontWeight: FontWeight.bold,
-              fontFamily: 'Akshar',
-              color: updsAzul,
-            ),
-          ),
           SizedBox(
-            height: MediaQuery.of(context).size.height - 300,
+            height: MediaQuery.of(context).size.height - 250,
             child: PageView.builder(
               itemCount: images.length,
               itemBuilder: (context, index) {
-                return Center(
-                  child: InteractiveViewer(
-                    child: Image.asset(
-                      images[index],
-                      fit: BoxFit.contain,
+                String pageTitle = (index >= images.length - 2)
+                    ? 'REQUISITOS'
+                    : 'MALLA CURRICULAR';
+
+                String pageTitle2 = (index >= images.length - 5)
+                    ? 'RESOLUCIÓN'
+                    : 'MALLA CURRICULAR';
+                ////Resolucion ministerial
+                return Column(
+                  children: [
+                    Text(
+                      nombre != 'INGENIERÍA INDUSTRIAL'
+                          ? pageTitle
+                          : pageTitle2,
+                      style: TextStyle(
+                        fontSize: sizeTexto,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Akshar',
+                        color: updsAzul,
+                      ),
                     ),
-                  ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height - 280,
+                      child: InteractiveViewer(
+                        child: Image.asset(
+                          images[index],
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                    ),
+                  ],
                 );
               },
             ),
